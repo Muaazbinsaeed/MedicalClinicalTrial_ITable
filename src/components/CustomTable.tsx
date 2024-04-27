@@ -11,6 +11,7 @@ import TablePins from './TablePins'
 import { Table as BTable } from 'react-bootstrap'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
+
 type TableGroup = 'center' | 'left' | 'right'
 
 function getTableHeaderGroups<T extends RowData>(
