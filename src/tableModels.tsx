@@ -2260,6 +2260,7 @@ export const columns: ColumnDef<ClinicalTrial>[] = [
     header: () => <span>Secondary Endpoint(s)</span>,
     cell: info => info.getValue(),
     footer: props => props.column.id,
+    
   },
   {
     header: 'ORR - N (%)',

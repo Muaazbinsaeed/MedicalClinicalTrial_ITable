@@ -28,16 +28,15 @@ import { faker } from '@faker-js/faker'
 import CustomTable from './components/CustomTable'
 
 
-// import { Select, Collapse } from 'antd';
-// const { Panel } = Collapse;
 
-// var Collapse = require('rc-collapse');
-
+// import { Table as BTable } from 'react-bootstrap'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import Collapse from 'rc-collapse'
 import 'rc-collapse/assets/index.css';
-
 const { Panel } = Collapse;
 // var Panel = Collapse.Panel;
+
+
 
 const Styles = styled.div`
   padding: 1rem;
@@ -80,6 +79,7 @@ const Styles = styled.div`
     padding: 0.5rem;
   }
 `
+
 
 export const App = () => {
   const rerender = React.useReducer(() => ({}), {})[1]
@@ -158,12 +158,7 @@ export const App = () => {
   return (
     <Styles>
       <div>
-      {/* <Collapse accordion={true}>
-    <Panel header="hello" headerClass="my-header-class">
-      this is panel content
-    </Panel>
-    <Panel header="title2">this is panel content2 or other</Panel>
-  </Collapse> */}
+     
       </div>
       <div className="p-2 grid grid-cols-4 gap-4">
         <div className="p-2">

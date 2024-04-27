@@ -8,6 +8,8 @@ import {
 import React from 'react'
 import Filter from './Filter'
 import TablePins from './TablePins'
+import { Table as BTable } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 type TableGroup = 'center' | 'left' | 'right'
 
@@ -50,6 +52,9 @@ export function CustomTable<T extends RowData>({
 
   return (
     <table>
+      {/* Bootstarp stripe */}
+<BTable striped bordered hover responsive size="sm">
+
       <thead>
         {headerGroups.map(headerGroup => (
           <tr key={headerGroup.id}>
@@ -125,7 +130,12 @@ export function CustomTable<T extends RowData>({
             {getRowGroup(row, tableGroup).map(cell => (
               <td
                 key={cell.id}
-                style={{width: cell.column.getSize(),
+                style={{
+                  // overflow
+                  // width: cell.column.getSize(), maxHeight: 2,
+                  // white-space: nowrap,
+                  // overflow: hidden,
+                  // text-overflow: ellipsi,
                 }}
               >
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -150,6 +160,7 @@ export function CustomTable<T extends RowData>({
           </tr>
         ))}
       </tfoot>
+      </BTable>
     </table>
   )
 }
