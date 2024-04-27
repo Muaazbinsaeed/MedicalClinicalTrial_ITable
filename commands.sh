@@ -9,13 +9,9 @@ npm i bootstrap
 
 npm i react-bootstrap
 
-
 # -------
 npm install
 npm run dev
-
-
-
 
 --------
 
